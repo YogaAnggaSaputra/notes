@@ -1,0 +1,121 @@
+/* ===== OTAK MILA — FERMENTED INK THEME ===== */
+:root {
+  --color-canvas: #0D0F0E;
+  --color-surface-0: #111513;
+  --color-surface-1: #161A18;
+  --color-surface-2: #1C2220;
+  --color-primary: #4A6741;
+  --color-primary-glow: #5E8554;
+  --color-primary-dim: #2E4029;
+  --color-accent: #C8922A;
+  --color-accent-bright: #E0A93A;
+  --color-accent-dim: #7A5A1A;
+  --color-text-primary: #E8EDE6;
+  --color-text-secondary: #9BA89A;
+  --color-text-muted: #5C6B5B;
+  --color-border-subtle: rgba(74, 103, 65, 0.15);
+  --color-border-active: rgba(200, 146, 42, 0.35);
+  --font-heading: "Playfair Display", Georgia, serif;
+  --font-body: "Source Serif 4", "Palatino Linotype", serif;
+  --font-mono: "JetBrains Mono", "Fira Code", monospace;
+  --font-ui: "DM Sans", system-ui, sans-serif;
+}
+
+/* Primary color override */
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: #4A6741;
+  --md-primary-fg-color--light: #5E8554;
+  --md-primary-fg-color--dark: #2E4029;
+  --md-accent-fg-color: #C8922A;
+  --md-default-bg-color: #0D0F0E;
+  --md-default-fg-color: #E8EDE6;
+  --md-default-fg-color--light: #9BA89A;
+  --md-default-fg-color--lighter: #5C6B5B;
+  --md-typeset-color: #E8EDE6;
+  --md-typeset-a-color: #C8922A;
+  --md-code-bg-color: #161A18;
+  --md-code-fg-color: #E8EDE6;
+  --md-admonition-bg-color: rgba(28, 34, 32, 0.7);
+  --md-footer-bg-color: #111513;
+  --md-footer-bg-color--dark: #0D0F0E;
+}
+
+body {
+  background: radial-gradient(ellipse 80% 60% at 20% 10%, rgba(74, 103, 65, 0.12) 0%, transparent 60%),
+              radial-gradient(ellipse 60% 80% at 80% 90%, rgba(200, 146, 42, 0.07) 0%, transparent 50%),
+              #0D0F0E;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-heading) !important;
+  letter-spacing: -0.02em;
+}
+
+h1 {
+  background: linear-gradient(90deg, #E8EDE6 0%, #C8922A 60%, #4A6741 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+h2 { color: var(--color-primary-glow) !important; }
+
+.md-typeset a {
+  color: var(--color-accent);
+  text-decoration: underline;
+  text-decoration-color: rgba(200, 146, 42, 0.35);
+  text-underline-offset: 3px;
+}
+
+.md-typeset a:hover {
+  color: var(--color-accent-bright);
+  text-decoration-color: var(--color-accent-bright);
+}
+
+.md-typeset code {
+  background: var(--color-surface-1);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: 4px;
+  padding: 0.1em 0.4em;
+  font-family: var(--font-mono);
+  font-size: 0.875em;
+  color: var(--color-accent);
+}
+
+.md-typeset pre {
+  background: var(--color-surface-1) !important;
+  border: 1px solid var(--color-border-subtle);
+  border-radius: 8px;
+}
+
+.md-typeset blockquote {
+  border-left: 3px solid var(--color-accent-dim);
+  background: rgba(22, 26, 24, 0.4);
+  backdrop-filter: blur(4px);
+  padding: 0.75rem 1rem;
+  border-radius: 0 6px 6px 0;
+  color: var(--color-text-secondary);
+}
+
+.md-sidebar {
+  background: rgba(22, 26, 24, 0.55) !important;
+  backdrop-filter: blur(8px) saturate(120%);
+}
+
+.md-header {
+  background: rgba(17, 21, 19, 0.85) !important;
+  backdrop-filter: blur(12px) saturate(140%);
+}
+
+.md-search__overlay {
+  background: rgba(13, 15, 14, 0.85);
+}
+
+.md-footer {
+  border-top: 1px solid var(--color-border-subtle);
+}
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #0D0F0E; }
+::-webkit-scrollbar-thumb { background: rgba(74, 103, 65, 0.15); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #2E4029; }
